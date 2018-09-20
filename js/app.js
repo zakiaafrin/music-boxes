@@ -1,7 +1,7 @@
 //select element and create variables
-var keys = document.querySelectorAll(".key")
-var notes = {
-   cKey: document.querySelector("#cAudio"),
+var keys = document.querySelectorAll(".key")  // Grab all elements and put them in a NodeList
+var notes = {                                 //In the notes object we used the id's of the HTML elements to identify what audio element to play
+   cKey: document.querySelector("#cAudio"),   //cKey is a property
    dKey: document.querySelector("#dAudio"),
    eKey: document.querySelector("#eAudio"),
    fKey: document.querySelector("#fAudio"),
@@ -14,7 +14,7 @@ var notes = {
 
 
 //define functions
-function playNote(key){
+function playNote(key){     //'key' holds the elements ID
   // console.log(key)
   notes[key].currentTime =0
   notes[key].play()
@@ -24,7 +24,8 @@ function playNote(key){
 
 
 //call functions add event listeners
-keys.forEach(function(key){
+keys.forEach(function(key){                               //keys.forEach(function(key){
+})
    console.dir(key)
    key.addEventListener("click" , function(){
        playNote(key.id)
