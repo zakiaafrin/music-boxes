@@ -25,7 +25,7 @@ function playNote(key){     //'key' holds the elements ID
 
 //call functions add event listeners
 keys.forEach(function(key){                               //keys.forEach(function(key){
-})
+
    console.dir(key)
    key.addEventListener("click" , function(){
        playNote(key.id)
